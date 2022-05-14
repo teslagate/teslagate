@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-7 col-sm-8">
                 <div class="bottom-logo"><img class="pb-3" src="images/logow.png" alt="">
-                    <p>MetaInv is a unique and beautiful collection of UI elements that are all flexible and modular. A
-                        complete and customizable solution to building the website of your dreams.</p>
+                    <p>MetaInv is a unique and beautiful collection </p>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-5 col-sm-4 col-6">
