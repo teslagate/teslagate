@@ -169,21 +169,6 @@ include('administrator/includes/function.php');
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="js/scripts.js"></script>
 
 
