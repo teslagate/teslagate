@@ -16,7 +16,7 @@ $title='MetaInv';
 $copyright="MetaInv";
 $walletno="TTkyGG4o9wXcx3HB5EdVmeBYj9Ke8A2gR8";
 $ethertype="TRC20";
-$welcomemail='info@.com';
+$welcomemail='info@teslagateway.com';
 $forgotmail='info@teslagateway.com';
 $feedmail='info@teslagateway.com';
 $usercode='META';
@@ -1129,7 +1129,7 @@ function getSettingsRewardID($conn,$id,$field)
 	}
 }
 
-//----------------------------24/11/2019----------------------//
+//----------------------------05/13/2022----------------------//
 function getActiveSponsor($conn,$userid)
 {
 	$sql="SELECT `id` FROM `or_member` WHERE `sponsor`='".$userid."' AND `status`='A' AND `paystatus`='A' ORDER BY `id`";
@@ -1203,7 +1203,7 @@ function getPaidTotalWithdrawal($conn,$column)
 }
 
 
-//--------------------12/12/2019--------------------//
+//--------------------05/15/2022--------------------//
 
 function getBlankPosition($conn,$table,$userid)
 {
@@ -1570,31 +1570,3 @@ function getBinaryBonusDate1($conn,$userid,$date)
 	return $total;
 }
 
-
-
-function getContact($conn,$field)
-{
-	$sql="SELECT * FROM `or_contact` ORDER BY `id` LIMIT 1";
-	$res=query($conn,$sql);
-	$num=numrows($res);
-	if($num>0)
-	{
-		$fetch=fetcharray($res);
-
-		return $fetch[$field];
-	}
-}
-
-function getOperatorByCode($conn,$code)
-{
-	$sql="SELECT * FROM `or_recharge_operator` WHERE `code`='".$code."' ORDER BY `id` LIMIT 1";
-	$res=query($conn,$sql);
-	$num=numrows($res);
-	if($num>0)
-	{
-		$fetch=fetcharray($res);
-
-		return $fetch['operator'];
-	}
-}
-?>
