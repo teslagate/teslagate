@@ -190,5 +190,5 @@ include('administrator/includes/function.php');
 </body>
 
 
-<!-- Mirrored from neftify-html.vercel.app/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 May 2022 18:14:12 GMT -->
+
 </html>

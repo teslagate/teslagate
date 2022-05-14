@@ -27,48 +27,8 @@ include('administrator/includes/function.php');
 
 <div id="main-wrapper" class="front">
 
-    <div class="header landing">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="navigation">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <div class="brand-logo">
-                            <a href="index.html">
-                                <img src="images/logo.png" alt="" class="logo-primary">
-                                <img src="images/logow.png" alt="" class="logo-white">
-                            </a>
-                        </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item dropdown"><a class="nav-link" href="index-2.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
-                                <li class="nav-item"><a class="nav-link" href="item.html">Item</a></li>
-                                <li class="nav-item"><a class="nav-link" href="collection.html">Collection</a></li>
-                                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-                                <li class="nav-item"><a class="nav-link" href="upload.html">Upload</a></li>
-                                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-                            </ul>
-                        </div>
-                        <div class="signin-btn d-flex align-items-center">
-                            <div class="dark-light-toggle theme-switch" onclick="themeToggle()">
-                                <span class="dark"><i class="ri-moon-line"></i></span>
-                                <span class="light"><i class="ri-sun-line"></i></span>
-                            </div>
+     <?php include'includes/menu.php'; ?>
 
-                            <a class="btn btn-primary" href="connect.html">Connect</a>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
     <div class="page-title">
     <div class="container">
         <div class="row align-items-center justify-content-between">
