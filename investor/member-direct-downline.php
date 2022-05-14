@@ -2,8 +2,7 @@
 session_start();
 include('../administrator/includes/function.php');
 
-$userid = getMember($conn, $_SESSION['mid'], 'userid');
-$paystatus = getMember($conn, $_SESSION['mid'], 'paystatus');
+
 
 if (!isset($_SESSION['mid'])) {
     redirect('../index.php');
@@ -106,106 +105,53 @@ $paystatus = getMember($conn, $_SESSION['mid'], 'paystatus');
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
-                                        </th>
-                                        <th>Item List</th>
-                                        <th>Open Price</th>
-                                        <th>Your Offer</th>
-                                        <th>Recent Offer</th>
-                                        <th>Time Left</th>
-                                        <th>Action</th>
+                                       
+                                        <th>#NO</th>
+
+                                        <th>User ID</th>
+                                        <th>Full Name</th>
+                                        <th>Phone</th>
+                                        <th>Status</th>
+                                        <th>Pay Status</th>
+                                        <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
+                                    <?php
+                                    $tname = 'or_member';
+                                    $lim = 100;
+                                    $tpage = 'member-direct-downline.php';
+                                    $where = "WHERE `sponsor`='" . getMember($conn, $_SESSION['mid'], 'userid') . "' ORDER BY `id` DESC";
+                                    include('pagination.php');
+                                    $num = numrows($result);
+                                    $i = 1;
+                                    if ($num > 0) {  
+                                        while ($fetch = fetcharray($result)) {
+                                    ?>
+                                            <td align="center"><?= $i ?></td>
+                                            <td align="center"><?= $fetch['userid'] ?></td>
+                                            <td align="center"><?= $fetch['name'] ?></td>
+                                            <td align="center"><?= $fetch['phone'] ?></td>
+                                            <td align="center"><?php if ($fetch['status'] == 'A') { ?><span style="display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #22a50f; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 8px;">Active</span><?php } else { ?> <span style="display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #a80d0d; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 8px; ">Inactive</span><?php } ?>
                                         </td>
-                                        <td>
-                                            <div class="d-flex align-items-center"><img src="images/items/15.jpg"
-                                                    alt="" width="60" class="me-3 rounded">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0">Cutes Cube Cool</h6>
-                                                    <p class="mb-0">John Abraham</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0.0025 ETH</td>
-                                        <td> 0.0025 ETH</td>
-                                        <td><img src="images/avatar/1.jpg" alt="" width="40"
-                                                class="me-2 rounded-circle">0.0025 ETH</td>
-                                        <td>2 Hours 1 min 30s</td>
-                                        <td><span><i class="ri-close-line me-3"></i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center"><img src="images/items/16.jpg"
-                                                    alt="" width="60" class="me-3 rounded">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0">Cutes Cube Cool</h6>
-                                                    <p class="mb-0">John Abraham</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0.0025 ETH</td>
-                                        <td> 0.0025 ETH</td>
-                                        <td><img src="images/avatar/2.jpg" alt="" width="40"
-                                                class="me-2 rounded-circle">0.0025 ETH</td>
-                                        <td>2 Hours 1 min 30s</td>
-                                        <td><span><i class="ri-close-line me-3"></i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center"><img src="images/items/17.jpg"
-                                                    alt="" width="60" class="me-3 rounded">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0">Cutes Cube Cool</h6>
-                                                    <p class="mb-0">John Abraham</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0.0025 ETH</td>
-                                        <td> 0.0025 ETH</td>
-                                        <td><img src="images/avatar/3.jpg" alt="" width="40"
-                                                class="me-2 rounded-circle">0.0025 ETH</td>
-                                        <td>2 Hours 1 min 30s</td>
-                                        <td><span><i class="ri-close-line me-3"></i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center"><img src="images/items/18.jpg"
-                                                    alt="" width="60" class="me-3 rounded">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0">Cutes Cube Cool</h6>
-                                                    <p class="mb-0">John Abraham</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0.0025 ETH</td>
-                                        <td> 0.0025 ETH</td>
-                                        <td><img src="images/avatar/4.jpg" alt="" width="40"
-                                                class="me-2 rounded-circle">0.0025 ETH</td>
-                                        <td>2 Hours 1 min 30s</td>
-                                        <td><span><i class="ri-close-line me-3"></i></span></td>
-                                    </tr>
+                                            <td align="center"><?php if ($fetch['paystatus'] == 'I') { ?><span style=" display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #a80d0d; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 8px;">Pending</span><?php } else { ?><span style="display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #22a50f; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 8px;">Paid</span><?php } ?></td>
+                                            <td align="center"><?= $fetch['date'] ?></td>
+                                            </tr>
+
+                                        <?php $i++;
+                                        }
+                                    } else { ?>
+                                        <tr>
+                                            <td colspan="7" align="center" style="color:#FF0000;">No Record Found!</td>
+                                        </tr>
+                                    <?php } ?>
+
+
+
                                 </tbody>
                             </table>
                         </div>
+                         <div align="center"><?= $pagination ?></div>
                     </div>
                 </div>
             </div>

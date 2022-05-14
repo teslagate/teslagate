@@ -34,62 +34,24 @@ $paystatus = getMember($conn, $_SESSION['mid'], 'paystatus');
 
 <div id="main-wrapper" class="admin">
 
-    <div class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-xxl-12">
-                <div class="header-content">
-                    <div class="header-left">
-                        <div class="brand-logo"><a class="mini-logo" href="index.html"><img src="images/logoi.png" alt=""
-                                    width="40"></a></div>
-                        <div class="search">
-                            <form action="#"><span><i class="ri-search-line"></i></span><input type="text"
-                                    placeholder="Search Here"></form>
-                        </div>
-                    </div>
-                    <div class="header-right">
-                        <!-- <div class="theme-switch"><i class="ri-sun-line"></i></div> -->
-
-                     
-
-
-                    
-                        <div class="dropdown profile_log dropdown">
-                            <div data-bs-toggle="dropdown">
-                                <div class="user icon-menu active"><span><img src="images/avatar/9.jpg" alt=""></span>
-                                </div>
-                            </div>
-                            <div tabindex="-1" class="dropdown-menu dropdown-menu-end">
-                                <div class="user-email">
-                                    <div class="user">
-                                        <span class="thumb">
-                                            <img src="images/profile/3.png" alt="">
-                                        </span>
-                                        <div class="user-info">
-                                            <h5><?=getMember($conn,$_SESSION['mid'],'name')?></h5>
-                                            <span><?=getMember($conn,$_SESSION['mid'],'email')?></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="dropdown-item" href="profile.html">
-                                    <span><i class="ri-user-line"></i></span>Profile
-                                </a>
-                               
-                                <a class="dropdown-item logout" href="logout.php">
-                                    <i class="ri-logout-circle-line"></i>Logout
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+   
    
    <?php include'includes/left-side.php'; ?>
 
-<?php
+               
+
+           
+    <div class="content-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="promotion d-flex justify-content-between align-items-center">
+
+                        <div class="promotion-detail">
+                            <h3 class="text-white mb-3">Choose your investment NFT and win</h3>
+                            <p>Try the new generation earning system with B2I now!</p><a href="plan.php" 
+                                class="btn btn-primary me-3">Investment Discover</a>
+                                 <?php
                 $sql = "SELECT * FROM `or_announcement` ORDER BY `id` DESC";
                 $res = query($conn, $sql);
                 $num = numrows($res);
@@ -121,9 +83,9 @@ $paystatus = getMember($conn, $_SESSION['mid'], 'paystatus');
 
                 ?>
 
-                    <b> Package Name: </b> <span style="color:red"><?= $getpackname ?> </span>
+                    <b> Package Name: </b> <span style="color:#ffffff"><?= $getpackname ?> </span>
                     &nbsp&nbsp&nbsp&nbsp
-                    <b> Package Amount: </b> <span style="color:red"><?= $getpackamt ?> </span>
+                    <b> Package Amount: </b> <span style="color:#ffffff"><?= $getpackamt ?> </span>
                     &nbsp&nbsp&nbsp&nbsp
                     <b>Join Date : <span class="badge badge-success"><?=getMember($conn,$_SESSION['mid'],'date')?></span></b>
 
@@ -134,17 +96,6 @@ $paystatus = getMember($conn, $_SESSION['mid'], 'paystatus');
                     <h3 align="center" style="color:#FF0000; font-size:22px;font-weight: 800;text-transform: capitalize;"><br /><a href="activation.php">Click here</a> to activate your account!</h3>
                 <?php } ?>
 
-
-           
-    <div class="content-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-xxl-12">
-                    <div class="promotion d-flex justify-content-between align-items-center">
-                        <div class="promotion-detail">
-                            <h3 class="text-white mb-3">Choose your investment NFT and win</h3>
-                            <p>Try the new generation earning system with B2I now!</p><a href="plan.php" 
-                                class="btn btn-primary me-3">Invest Plan</a>
                         </div>
 
                     </div>
@@ -154,7 +105,9 @@ $paystatus = getMember($conn, $_SESSION['mid'], 'paystatus');
 
                
                 <div class="col-xxl-3 col-xl-12">
+
                     <div class="row">
+
                         <div class="col-xxl-12 col-xl-4 col-md-4 col-sm-6">
                             <div class="stat-widget d-flex align-items-center">
                                 <div class="widget-icon me-3 bg-primary"><span><i class="ri-wallet-line"></i></span>
@@ -246,106 +199,53 @@ $paystatus = getMember($conn, $_SESSION['mid'], 'paystatus');
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
-                                        </th>
-                                        <th>Item List</th>
-                                        <th>Open Price</th>
-                                        <th>Your Offer</th>
-                                        <th>Recent Offer</th>
-                                        <th>Time Left</th>
-                                        <th>Action</th>
+                                       
+                                        <th>#NO</th>
+
+                                        <th>User ID</th>
+                                        <th>Full Name</th>
+                                        <th>Phone</th>
+                                        <th>Status</th>
+                                        <th>Pay Status</th>
+                                        <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
+                                    <?php
+                                    $tname = 'or_member';
+                                    $lim = 100;
+                                    $tpage = 'member-direct-downline.php';
+                                    $where = "WHERE `sponsor`='" . getMember($conn, $_SESSION['mid'], 'userid') . "' ORDER BY `id` DESC";
+                                    include('pagination.php');
+                                    $num = numrows($result);
+                                    $i = 1;
+                                    if ($num > 0) {  
+                                        while ($fetch = fetcharray($result)) {
+                                    ?>
+                                            <td align="center"><?= $i ?></td>
+                                            <td align="center"><?= $fetch['userid'] ?></td>
+                                            <td align="center"><?= $fetch['name'] ?></td>
+                                            <td align="center"><?= $fetch['phone'] ?></td>
+                                            <td align="center"><?php if ($fetch['status'] == 'A') { ?><span style="display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #22a50f; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 8px;">Active</span><?php } else { ?> <span style="display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #a80d0d; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 8px; ">Inactive</span><?php } ?>
                                         </td>
-                                        <td>
-                                            <div class="d-flex align-items-center"><img src="images/items/15.jpg"
-                                                    alt="" width="60" class="me-3 rounded">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0">Cutes Cube Cool</h6>
-                                                    <p class="mb-0">John Abraham</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0.0025 ETH</td>
-                                        <td> 0.0025 ETH</td>
-                                        <td><img src="images/avatar/1.jpg" alt="" width="40"
-                                                class="me-2 rounded-circle">0.0025 ETH</td>
-                                        <td>2 Hours 1 min 30s</td>
-                                        <td><span><i class="ri-close-line me-3"></i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center"><img src="images/items/16.jpg"
-                                                    alt="" width="60" class="me-3 rounded">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0">Cutes Cube Cool</h6>
-                                                    <p class="mb-0">John Abraham</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0.0025 ETH</td>
-                                        <td> 0.0025 ETH</td>
-                                        <td><img src="images/avatar/2.jpg" alt="" width="40"
-                                                class="me-2 rounded-circle">0.0025 ETH</td>
-                                        <td>2 Hours 1 min 30s</td>
-                                        <td><span><i class="ri-close-line me-3"></i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center"><img src="images/items/17.jpg"
-                                                    alt="" width="60" class="me-3 rounded">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0">Cutes Cube Cool</h6>
-                                                    <p class="mb-0">John Abraham</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0.0025 ETH</td>
-                                        <td> 0.0025 ETH</td>
-                                        <td><img src="images/avatar/3.jpg" alt="" width="40"
-                                                class="me-2 rounded-circle">0.0025 ETH</td>
-                                        <td>2 Hours 1 min 30s</td>
-                                        <td><span><i class="ri-close-line me-3"></i></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    value=""></div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center"><img src="images/items/18.jpg"
-                                                    alt="" width="60" class="me-3 rounded">
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0">Cutes Cube Cool</h6>
-                                                    <p class="mb-0">John Abraham</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>0.0025 ETH</td>
-                                        <td> 0.0025 ETH</td>
-                                        <td><img src="images/avatar/4.jpg" alt="" width="40"
-                                                class="me-2 rounded-circle">0.0025 ETH</td>
-                                        <td>2 Hours 1 min 30s</td>
-                                        <td><span><i class="ri-close-line me-3"></i></span></td>
-                                    </tr>
+                                            <td align="center"><?php if ($fetch['paystatus'] == 'I') { ?><span style=" display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #a80d0d; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 8px;">Pending</span><?php } else { ?><span style="display: inline-block; padding: 0.35em 0.65em; font-size: 0.75em; font-weight: 700; line-height: 1; color: #22a50f; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 8px;">Paid</span><?php } ?></td>
+                                            <td align="center"><?= $fetch['date'] ?></td>
+                                            </tr>
+
+                                        <?php $i++;
+                                        }
+                                    } else { ?>
+                                        <tr>
+                                            <td colspan="7" align="center" style="color:#FF0000;">No Record Found!</td>
+                                        </tr>
+                                    <?php } ?>
+
+
+
                                 </tbody>
                             </table>
                         </div>
+                         <div align="center"><?= $pagination ?></div>
                     </div>
                 </div>
             </div>
