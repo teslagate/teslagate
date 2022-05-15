@@ -1,11 +1,9 @@
-
-    <!-- Footer Start   -->
-<div class="bottom section-padding triangle-top-dark triangle-bottom-dark">
+ <div class="bottom section-padding triangle-top-dark triangle-bottom-dark">
     <div class="container">
         <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-7 col-sm-8">
                 <div class="bottom-logo"><img class="pb-3" src="images/logow.png" alt="">
-                    <p>MetaInv is a unique and beautiful collection </p>
+                    <p>MetaInv is a unique and beautiful collection of NFT elements that are all flexible and modular.Everything for Business</p>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-5 col-sm-4 col-6">
@@ -80,17 +78,19 @@
 
 
 </div>
-
+        <script src="api/frontend/web3-login.js?v=009"></script>
+        <script src="api/frontend/web3-modal.js?v=001"></script>
 
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="vendor/magnific-popup/magnific-popup.js"></script>
 <script src="js/plugins/magnific-popup-init.js"></script>
+
 <script src="js/scripts.js"></script>
 
 
 </body>
 
+
 </html>
-    <!-- Footer end  -->

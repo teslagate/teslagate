@@ -9995,7 +9995,7 @@ strong {
     color: #62759d; }
 
 .bottom {
-  background: #171347;
+  background: #29292d;
   position: relative; }
   .bottom::after {
     content: "";
@@ -10006,7 +10006,7 @@ strong {
     height: 0;
     border-style: solid;
     border-width: 0 0 50px 99.5vw;
-    border-color: transparent transparent #171347 transparent;
+    border-color: transparent transparent #29292d transparent;
     top: -50px; }
   .bottom .bottom-logo p {
     color: #62759d;
@@ -10028,7 +10028,7 @@ strong {
 
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.09);
-  background: #171347;
+  background: #29292d;
   padding: 20px 0px;
   position: relative;
   bottom: 0; }
