@@ -4,7 +4,7 @@ MySQL 5.6
 [main] 	XAMPP Version: 7.4.22
 [main] 	Control Panel Version: 3.3.0 
 
-
+Configrasyon dosyası administrator/includes/function.php dosyasıdır. Db Connection configration yapmayı unutmayın !
 MySQL veritabanı dosyalası administrator/includes içerisinde meta.sql dosyasını import edin !
 
 demo bilgileride ; 
