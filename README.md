@@ -1,8 +1,18 @@
-- 👋 Hi, I’m @teslagate
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+Sistem gereksinimleri 
+PHP /.7.4
+MySQL 5.6
+[main] 	Initializing Control Panel
+[main] 	Windows Version:  Home  64-bit
+[main] 	XAMPP Version: 7.4.22
+[main] 	Control Panel Version: 3.3.0 
+
+
+MySQL veritabanı dosyalası administrator/includes içerisinde meta.sql dosyasını import edin !
+
+demo bilgileride ; 
+metainv.teslagateway.com üzerinden sağlanacaktır . 
+
+Panel access inf. Burdan paylaşılacak .
 
 <!---
 teslagate/teslagate is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
