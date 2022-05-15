@@ -27,7 +27,7 @@ include('administrator/includes/function.php');
     <div class="container h-100">
         <div class="row justify-content-center h-100 align-items-center">
             <div class="col-xl-5 col-md-6">
-                <div class="mini-logo text-center my-4"><a href="index-2.html"><img src="images/logo.png" alt=""></a>
+                <div class="mini-logo text-center my-4"><a href="index.php"><img src="images/logo.png" alt=""></a>
                     <h4 class="card-title mt-5">Sign in to MetaInv</h4>
                 </div>
                 <div class="auth-form card">

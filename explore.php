@@ -1,6 +1,7 @@
 <?php
 include('administrator/includes/function.php');
 
+include('includes/api.php');
 
 ?>
 
@@ -140,7 +141,7 @@ include('administrator/includes/function.php');
                                 <div class="card-body">
                                     <div class="items-img position-relative">
                                         <img src="images/items/1.jpg" class="img-fluid rounded mb-3" alt="">
-                                        <a href="profile.html"><img src="images/avatar/1.jpg" class="creator"
+                                        <a href="#"><img src="images/avatar/1.jpg" class="creator"
                                                 width="50" alt=""></a>
                                     </div>
                                     <a href="item.html">

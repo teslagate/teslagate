@@ -2,6 +2,7 @@
 
 <?php
 include('administrator/includes/function.php');
+include('includes/api.php');
 
 
 ?>
@@ -19,6 +20,7 @@ include('administrator/includes/function.php');
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 
 <body class="@@dashboard">
@@ -35,12 +37,12 @@ include('administrator/includes/function.php');
             <div class="col-6">
                 <div class="page-title-content">
                     <h3>Explore</h3>
-                    <p class="mb-2">Neftify Explore page</p>
+                    <p class="mb-2">MetaInv Explore page</p>
                 </div>
             </div>
             <div class="col-auto">
-                <div class="breadcrumbs"><a href="#">Home </a><span><i class="ri-arrow-right-s-line"></i></span><a
-                        href="#">Payments</a></div>
+                <div class="breadcrumbs"><a href="index.php">Home </a><span><i class="ri-arrow-right-s-line"></i></span><a
+                        href="registration.php">Purchase</a></div>
             </div>
         </div>
     </div>
@@ -53,7 +55,8 @@ include('administrator/includes/function.php');
                 <div class="col-xxl-12">
                     <div class="top-bid">
                         <div class="card-body">
-                            <?php
+                           
+                     <?php
                     $sql = "SELECT * FROM `or_settings_joining`  ORDER BY `id`";
                     $res = query($conn, $sql);
 
@@ -67,7 +70,7 @@ include('administrator/includes/function.php');
                                     <div class="d-flex align-items-center mb-3"><img src="images/avatar/1.jpg" alt=""
                                             class="me-3 avatar-img">
                                         <div class="flex-grow-1">
-                                            <h5 class="mb-0">John Abraham<span class="circle bg-success"></span></h5>
+                                            <h5 class="mb-0">Construction Company<span class="circle bg-success"></span></h5>
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-between mt-4 mb-4">
@@ -76,61 +79,19 @@ include('administrator/includes/function.php');
                                             <h5 class="text-muted">3h : 1m : 50s</h5>
                                         </div>
                                         <div class="text-end">
-                                            <h4 class="mb-2">Current Bid : <strong class="text-primary">0.05
-                                                    ETH</strong></h4>
-                                            <h5 class="text-muted">0.15 ETH</h5>
+                                            <h4 class="mb-2">Current Bid : <strong class="text-primary"><?php echo $fetch['joining']   ?> ETH</strong></h4>
+                                            <h5 class="text-muted">Network Fee : 0.15 ETH</h5>
                                         </div>
                                     </div>
-                                    <p class="mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, unde.
-                                        Unde, doloremque ipsam? Nesciunt dolorem nisi quae nostrum veniam quasi illum,
-                                        iusto tempore nihil, natus perspiciatis? Sed</p>
-                                    <h4 class="card-title mb-3">Latest Bids</h4>
+                                    <p class="mb-3"><?php echo $fetch['description']   ?></p>
+                                    
                                     <div class="bid mb-3 card">
-                                        <div class="activity-content card-body py-0">
-                                            <ul>
-                                                <li class="d-flex justify-content-between align-items-center">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="activity-user-img me-3"><img
-                                                                src="images/avatar/1.jpg" alt="" width="50"></div>
-                                                        <div class="activity-info">
-                                                            <h5 class="mb-0">Papaya</h5>
-                                                            <p>0.05 ETH</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-end"><span class=" text-muted">12 min ago</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex justify-content-between align-items-center">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="activity-user-img me-3"><img
-                                                                src="images/avatar/2.jpg" alt="" width="50"></div>
-                                                        <div class="activity-info">
-                                                            <h5 class="mb-0">Alex Maris</h5>
-                                                            <p>0.06 ETH</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-end"><span class=" text-muted">12 min ago</span>
-                                                    </div>
-                                                </li>
-                                                <li class="d-flex justify-content-between align-items-center">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="activity-user-img me-3"><img
-                                                                src="images/avatar/3.jpg" alt="" width="50"></div>
-                                                        <div class="activity-info">
-                                                            <h5 class="mb-0">John Adams</h5>
-                                                            <p>0.06 ETH</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-end"><span class=" text-muted">12 min ago</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                      
                                     </div>
                                     <div class="d-flex"><a href="registration.php" class="btn btn-primary">Buy Now</a></div>
                                 </div>
                             </div>
-                              <?php  } ?>
+ <?php  } ?>
                         </div>
                     </div>
                 </div>

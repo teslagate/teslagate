@@ -1,6 +1,6 @@
 <?php
 include('administrator/includes/function.php');
-
+include('includes/api.php');
 
 ?>
 
@@ -17,6 +17,7 @@ include('administrator/includes/function.php');
         <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 
 <body class="@@dashboard">
@@ -74,60 +75,29 @@ include('administrator/includes/function.php');
                 </div>
             </div>
             <div class="row align-items-center">
+                    <?php
+                    $sql = "SELECT * FROM `or_company`  ORDER BY `id`";
+                    $res = query($conn, $sql);
+
+                    while ($fetch = fetcharray($res)) {
+                        ?>
                 <div class="col-xl-4 col-lg-6 col-md-6">
-                    <a class="top-collection-content d-block" href="collection.html">
+                    <a class="top-collection-content d-block" href="#">
                         <div class="d-flex align-items-center"><span class="serial">1
                                 <!-- -->.
                             </span>
                             <div class="flex-shrink-0"><span class="top-img"><img class="img-fluid"
                                         src="images/items/1.jpg" alt="" width="70"></span></div>
                             <div class="flex-grow-1 ms-3">
-                                <h5>The MetaInv</h5>
-                                <p class="text-muted"><img src="images/svg/eth.svg" alt="" width="10"
-                                        class="me-2">136305.78</p>
+                                <h5><?php echo $fetch['company_name']   ?></h5>
+                                <p class="text-muted">Fondation: <?php echo $fetch['f_year'] ?></p>
                             </div>
-                            <h5 class="text-success">+
-                                <!-- -->104.25
-                            </h5>
+                           
                         </div>
                     </a>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <a class="top-collection-content d-block" href="collection.html">
-                        <div class="d-flex align-items-center"><span class="serial">2
-                                <!-- -->.
-                            </span>
-                            <div class="flex-shrink-0"><span class="top-img"><img class="img-fluid"
-                                        src="images/items/2.jpg" alt="" width="70"></span></div>
-                            <div class="flex-grow-1 ms-3">
-                                <h5>The MetaInv</h5>
-                                <p class="text-muted"><img src="images/svg/eth.svg" alt="" width="10"
-                                        class="me-2">136305.78</p>
-                            </div>
-                            <h5 class="text-success">+
-                                <!-- -->104.25
-                            </h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <a class="top-collection-content d-block" href="collection.html">
-                        <div class="d-flex align-items-center"><span class="serial">3
-                                <!-- -->.
-                            </span>
-                            <div class="flex-shrink-0"><span class="top-img"><img class="img-fluid"
-                                        src="images/items/3.jpg" alt="" width="70"></span></div>
-                            <div class="flex-grow-1 ms-3">
-                                <h5>The MetaInv</h5>
-                                <p class="text-muted"><img src="images/svg/eth.svg" alt="" width="10"
-                                        class="me-2">136305.78</p>
-                            </div>
-                            <h5 class="text-danger">-
-                                <!-- -->104.25
-                            </h5>
-                        </div>
-                    </a>
-                </div>
+               <?php  } ?>
+               
             
             </div>
         </div>
@@ -208,7 +178,7 @@ include('administrator/includes/function.php');
                             <h4>Set up your wallet </h4>
                             <p>Once you’ve set up your wallet of choice, connect it to Neftify by clicking the wallet
                                 icon in the top right corner. Learn about the wallets we support.</p><a
-                                href="explore.html">Explore<i class="bi bi-arrow-right-short"></i></a>
+                                href="explore.php">Explore<i class="bi bi-arrow-right-short"></i></a>
                         </div>
                     </div>
                 </div>
@@ -218,7 +188,7 @@ include('administrator/includes/function.php');
                         <div>
                             <h4>Create your collection</h4>
                             <p>Click My Collections and set up your collection. Add social links, a description, profile
-                                &amp; banner images, and set a secondary sales fee.</p><a href="explore.html">Explore<i
+                                &amp; banner images, and set a secondary sales fee.</p><a href="explore.php">Explore<i
                                     class="bi bi-arrow-right-short"></i></a>
                         </div>
                     </div>
@@ -230,7 +200,7 @@ include('administrator/includes/function.php');
                             <h4>Add your NFTs</h4>
                             <p>Upload your work (image, video, audio, or 3D art), add a title and description, and
                                 customize your NFTs with properties, stats, and unlockable content.</p><a
-                                href="explore.html">Explore<i class="bi bi-arrow-right-short"></i></a>
+                                href="explore.php">Explore<i class="bi bi-arrow-right-short"></i></a>
                         </div>
                     </div>
                 </div>
@@ -241,7 +211,7 @@ include('administrator/includes/function.php');
                             <h4>List them for sale</h4>
                             <p>Choose between auctions, fixed-price listings, and declining-price listings. You choose
                                 how you want to sell your NFTs, and we help you sell them!</p><a
-                                href="explore.html">Explore<i class="bi bi-arrow-right-short"></i></a>
+                                href="explore.php">Explore<i class="bi bi-arrow-right-short"></i></a>
                         </div>
                     </div>
                 </div>
