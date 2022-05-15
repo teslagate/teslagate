@@ -10,6 +10,8 @@ MySQL veritabanı dosyalası administrator/includes içerisinde meta.sql dosyas�
 
 Referance User ID MFEST8364144
 
+DEMO URL: https://metainv.teslagateway.com/
+
 <!---
 teslagate/teslagate is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
