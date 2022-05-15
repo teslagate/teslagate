@@ -1,8 +1,6 @@
 Sistem gereksinimleri 
 PHP /.7.4
 MySQL 5.6
-[main] 	Initializing Control Panel
-[main] 	Windows Version:  Home  64-bit
 [main] 	XAMPP Version: 7.4.22
 [main] 	Control Panel Version: 3.3.0 
 
