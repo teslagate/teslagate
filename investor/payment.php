@@ -55,17 +55,38 @@ $left = 2;
             <!-- /Title -->
         </div>
         <div class="col-md-8">
-            <div class="alert alert-success" role="alert"   style="overflow-x:auto;">
-                                   <label>USD-T Wallet : </label>  <input type="text" class="alert alert-success" style="width:100%; border-color: #000;" id="p1" value="<?=$walletno?>"><label class="alert alert-danger" style="font-weight: bold;"><?=$ethertype?></label> <button onClick="copyToClipboard('#p1')" style="background-color:rgb(34 175 71);" id="cpbutton" class="btn btn-primary">Copy Wallet</button> </br>
-                                <div align="center"></div>
-
+           
            </div>
-                                                 
+                           <div class="auth-form">
+                    <div class="row">
+                        <div class="col-xl-6"><a class="card text-center" href="dashboard.html">
+                                <div class="card-body"><img src="images/wallet/1.webp" alt="" width="50" class="mb-3">
+                                    <h5 class="mb-0">MetaMask</h5>
+                                </div>
+                            </a></div>
+                        <div class="col-xl-6"><a class="card text-center" href="dashboard.html">
+                                <div class="card-body"><img src="images/wallet/2.webp" alt="" width="50" class="mb-3">
+                                    <h5 class="mb-0">Coinbase</h5>
+                                </div>
+                            </a></div>
+                        <div class="col-xl-6"><a class="card text-center" href="dashboard.html">
+                                <div class="card-body"><img src="images/wallet/3.webp" alt="" width="50" class="mb-3">
+                                    <h5 class="mb-0">WalletConnect</h5>
+                                </div>
+                            </a></div>
+                        <div class="col-xl-6"><a class="card text-center" href="dashboard.html">
+                                <div class="card-body"><img src="images/wallet/4.webp" alt="" width="50" class="mb-3">
+                                    <h5 class="mb-0">Formatic</h5>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>                       
 
                         <div class="card" style="background:#FFFFFF;">
                             <div class="card-header">
                                 <div class="card-title">Payment Request</div>
                             </div>
+                            
                             
                             
                             <div class="card-body">

@@ -83,9 +83,9 @@ $paystatus = getMember($conn, $_SESSION['mid'], 'paystatus');
 
                 ?>
 
-                    <b> Package Name: </b> <span style="color:#ffffff"><?= $getpackname ?> </span>
+                    <b> Invest Plan: </b> <span style="color:#ffffff"><?= $getpackname ?> </span>
                     &nbsp&nbsp&nbsp&nbsp
-                    <b> Package Amount: </b> <span style="color:#ffffff"><?= $getpackamt ?> </span>
+                    <b> Inv Value: </b> <span style="color:#ffffff"><?= $getpackamt ?> </span>
                     &nbsp&nbsp&nbsp&nbsp
                     <b>Join Date : <span class="badge badge-success"><?=getMember($conn,$_SESSION['mid'],'date')?></span></b>
 

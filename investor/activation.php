@@ -8,23 +8,48 @@ if (!isset($_SESSION['mid'])) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    Account Verification | <?= $title ?>
+    <meta name="description"        content="Dashboard">
 
 
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-<title>Account Verification | <?= $title ?></title>
+<body class="@@dashboard">
 
-<!-- Main Content -->
-<div class="hk-pg-wrapper">
-    <!-- Container -->
-    <div class="container mt-xl-50 mt-sm-30 mt-15">
-        <!-- Title -->
-        <div class="hk-pg-header">
+<div id="preloader"><i>.</i><i>.</i><i>.</i></div>
+
+<div id="main-wrapper" class="admin">
+
+   
+   
+   <?php include'includes/left-side.php'; ?>
+
+               
+
+           
+    <div class="content-body">
+        <div class="container">
+            <div class="row">
+               
+              
+               
+ <div class="hk-pg-header">
             <div>
                 <h2 class="hk-pg-title font-weight-600 mb-10">Account Verification <i data-feather="check-circle"></i> </h2>
             </div>
             <!-- /Title -->
         </div>
-        <div class="col-md-8">
+              <div class="col-md-8">
        
                            
                             <div>&nbsp;</div>
@@ -42,12 +67,41 @@ if (!isset($_SESSION['mid'])) {
                                     <button class="btn btn-success">Activate Now</button>
                                 </div>
                             </form>
+
+               
+
+            </div>
         </div>
+    </div>
+
+
+    
+</div>
 
 
 
-        <!-- /Container -->
 
-        <?php
-        include 'footer/footer.php';
-        ?>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script src="vendor/chartjs/chart.bundle.min.js"></script>
+
+
+<script src="js/plugins/chartjs-line-init.js"></script>
+
+
+
+
+<script src="js/plugins/chartjs-donut.js"></script>
+
+
+
+<script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>

@@ -44,18 +44,7 @@ $paystatus = getMember($conn, $_SESSION['mid'], 'paystatus');
     <div class="content-body">
         <div class="container">
             <div class="row">
-                <div class="col-xxl-12">
-                    <div class="promotion d-flex justify-content-between align-items-center">
-
-                        <div class="promotion-detail">
-                            <h3 class="text-white mb-3">Choose your investment NFT and win</h3>
-                            <p>Try the new generation earning system with B2I now!</p><a href="plan.php" 
-                                class="btn btn-primary me-3">Investment Discover</a>
-                                
-                        </div>
-
-                    </div>
-                </div>
+               
               
                
 
