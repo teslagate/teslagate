@@ -27,7 +27,7 @@
                                 <div class="user-email">
                                     <div class="user">
                                         <span class="thumb">
-                                            <img src="images/profile/3.png" alt="">
+                                            <img src="/images/profile/3.png" alt="">
                                         </span>
                                         <div class="user-info">
                                             <h5><?=getMember($conn,$_SESSION['mid'],'name')?></h5>
@@ -35,7 +35,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a class="dropdown-item" href="profile.html">
+                                <a class="dropdown-item" href="edit-profile.php">
                                     <span><i class="ri-user-line"></i></span>Profile
                                 </a>
                                
@@ -52,7 +52,7 @@
 </div>
 
  <div class="sidebar">
-    <div class="brand-logo"><a class="full-logo" href="dashboard.html"><img src="images/logo.png" alt="" ></a></div>
+    <div class="brand-logo"><a class="full-logo" href="dashboard.php"><img src="images/logo.png" alt="" ></a></div>
     <div class="menu">
         <ul>
             <li>
@@ -116,7 +116,7 @@
 
 
             <li class="">
-                <a href="settings-profile.html">
+                <a href="edit-profile.php">
                     <span><i class="ri-settings-3-line"></i></span>
                     <span class="nav-text">Settings Profile</span></a>
             </li>
