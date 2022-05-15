@@ -7,11 +7,6 @@ MySQL 5.6
 Configrasyon dosyası administrator/includes/function.php dosyasıdır. Db Connection configration yapmayı unutmayın !
 MySQL veritabanı dosyalası administrator/includes içerisinde meta.sql dosyasını import edin !
 
-demo bilgileride ; 
-metainv.teslagateway.com üzerinden sağlanacaktır . 
-
-Panel access inf. Burdan paylaşılacak .
-
 
 Referance User ID MFEST8364144
 
